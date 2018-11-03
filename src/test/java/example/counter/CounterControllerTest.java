@@ -1,6 +1,5 @@
 package example.counter;
 
-import example.helloworld.HelloControllerTest;
 import io.micronaut.context.ApplicationContext;
 import io.micronaut.http.HttpRequest;
 import io.micronaut.http.client.HttpClient;
