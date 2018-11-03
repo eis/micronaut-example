@@ -9,3 +9,8 @@ mkdir -p src/main/java/example/helloworld
 vi src/main/java/example/helloworld/HelloController.java
 ./gradlew run
 ```
+
+Call
+```
+curl localhost:8080/hello
+```
