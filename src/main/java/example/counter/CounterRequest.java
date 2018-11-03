@@ -1,9 +1,13 @@
 package example.counter;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 class CounterRequest {
-    final Integer int1;
-    final Integer int2;
+    Integer int1;
+    Integer int2;
 }

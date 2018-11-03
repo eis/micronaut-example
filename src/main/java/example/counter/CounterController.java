@@ -1,5 +1,6 @@
 package example.counter;
 
+import io.micronaut.http.annotation.Body;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Post;
 import io.reactivex.Single;
@@ -13,7 +14,7 @@ public class CounterController {
     CounterService counterService;
 
     @Post("/add")
-    public Single<CounterResult> add(CounterRequest counterRequest) {
+    public Single<CounterResult> add(@Body CounterRequest counterRequest) {
         return counterService.add(counterRequest.int1, counterRequest.int2).map(CounterResult::new);
     }
 }

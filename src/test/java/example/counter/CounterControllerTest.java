@@ -20,7 +20,7 @@ public class CounterControllerTest {
     @Test
     public void shouldCount() {
         CounterResult response = client.toBlocking()
-                .retrieve(HttpRequest.POST("/counter/add", "{\"int1\": 2, \"int2\": 3}"),
+                .retrieve(HttpRequest.POST("/counter/add", new CounterRequest(2, 3)),
                         CounterResult.class);
         logger.info("We got a response '{}'", response);
         assertEquals(Integer.valueOf(5), response.result);
