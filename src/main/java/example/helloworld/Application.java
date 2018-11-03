@@ -1,4 +1,4 @@
-package hello.world;
+package example.helloworld;
 
 import io.micronaut.runtime.Micronaut;
 
