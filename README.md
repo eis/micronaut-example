@@ -20,6 +20,9 @@ Build a package
 ./gradlew assemble
 ```
 
-Notes on IntelliJ
- - if you experience tests strangely failing, confirm you have
-    annotation processing enabled
+Notes on Micronaut
+ - if you experience tests strangely failing on IntelliJ,
+    confirm you have annotation processing enabled
+ - if you experience problems with Lombok annotation not being
+    present on compile time with gradle, ensure your annotation
+    processor is run before Micronaut annotation processor is run
