@@ -10,7 +10,6 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.IOException;
 import static org.junit.Assert.assertEquals;
 
 public class HelloControllerTest {
@@ -28,17 +27,16 @@ public class HelloControllerTest {
 
     @Test
     public void shouldReturnHello() {
-        logger.info("Example log from {}", HelloControllerTest.class.getSimpleName());
-        logger.info("server at {}", this.server.getURI());
+        logger.info("Testing server at {}", this.server.getURI());
 
         String response = client.toBlocking()
                 .retrieve(HttpRequest.GET("/hello"));
-        logger.info("Example log from {}, {}", HelloControllerTest.class.getSimpleName(), response);
+        logger.info("We got a response '{}'", response);
         assertEquals(response, "Hello World");
     }
 
     @After
-    public void cleanup() throws IOException {
+    public void cleanup() {
         this.server.stop();
         this.client.close();
     }
