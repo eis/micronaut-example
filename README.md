@@ -14,3 +14,12 @@ Call
 ```
 curl localhost:8080/hello
 ```
+
+Build a package
+```
+./gradlew assemble
+```
+
+Notes on IntelliJ
+ - if you experience tests strangely failing, confirm you have
+    annotation processing enabled
